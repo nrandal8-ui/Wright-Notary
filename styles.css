@@ -64,13 +64,13 @@
   }
   .navlinks a:hover{ color: var(--gold); }
   .nav-cta{
-    background: var(--ink); color: var(--paper);
+    background: var(--gold); color: var(--ink);
     padding: 10px 20px; border-radius: 999px;
     font-weight:600; font-size:0.92rem; text-decoration:none;
-    transition: transform .15s ease, background .15s ease;
+    transition: transform .15s ease, background .15s ease, color .15s ease;
     display:inline-block;
   }
-  .nav-cta:hover{ background: var(--gold); transform: translateY(-1px); }
+  .nav-cta:hover{ background: var(--ink); color: var(--paper); transform: translateY(-1px); }
   .navlinks-mobile-toggle{ display:none; }
 
   @media (max-width: 720px){

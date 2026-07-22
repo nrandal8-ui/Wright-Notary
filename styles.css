@@ -55,7 +55,7 @@
     display:flex; align-items:center;
     text-decoration:none;
   }
-  .brand .nav-logo{ height:44px; width:auto; display:block; }
+  .brand .nav-logo{ height:60px; width:auto; display:block; }
   .navlinks{ display:flex; gap:28px; align-items:center; }
   .navlinks a{
     text-decoration:none; font-weight:600; font-size:0.95rem; color: var(--ink-soft);

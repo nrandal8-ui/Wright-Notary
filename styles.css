@@ -52,11 +52,10 @@
     max-width: var(--max); margin: 0 auto;
   }
   .brand{
-    display:flex; align-items:center; gap:10px;
-    font-family:'Fraunces', serif; font-weight:600; font-size:1.25rem;
-    text-decoration:none; color: var(--ink);
+    display:flex; align-items:center;
+    text-decoration:none;
   }
-  .brand .seal-mini{ width:32px; height:32px; }
+  .brand .nav-logo{ height:44px; width:auto; display:block; }
   .navlinks{ display:flex; gap:28px; align-items:center; }
   .navlinks a{
     text-decoration:none; font-weight:600; font-size:0.95rem; color: var(--ink-soft);
@@ -124,12 +123,13 @@
   .hero-note span{ display:flex; align-items:center; gap:6px; }
   .dot{ width:6px; height:6px; border-radius:50%; background: var(--gold); display:inline-block; }
 
-  /* seal visual */
+  /* logo visual */
   .seal-panel{
     position:relative; display:flex; justify-content:center; align-items:center;
   }
-  .seal-big{
-    width: min(320px, 80%);
+  .hero-logo{
+    width: min(420px, 90%);
+    height:auto;
     animation: rise 900ms ease-out;
   }
   @keyframes rise{
@@ -137,13 +137,13 @@
     to{ opacity:1; transform: translateY(0) scale(1); }
   }
   @media (prefers-reduced-motion: reduce){
-    .seal-big{ animation:none; }
+    .hero-logo{ animation:none; }
   }
 
   @media (max-width: 860px){
     .hero-grid{ grid-template-columns: 1fr; }
     .seal-panel{ order:-1; margin-bottom: 8px; }
-    .seal-big{ width: 180px; }
+    .hero-logo{ width: 280px; }
   }
 
   /* ---------- Section basics ---------- */
@@ -177,6 +177,17 @@
   .service-icon svg{ width:22px; height:22px; stroke: var(--gold); }
   .service-card h3{ font-size: 1.15rem; margin-bottom: 8px; }
   .service-card p{ color: var(--ink-soft); font-size: 0.96rem; margin:0; }
+
+  .service-card-head{ display:flex; align-items:center; gap:10px; flex-wrap:wrap; margin-bottom: 8px; }
+  .service-card-head h3{ margin-bottom:0; }
+  .soon-badge{
+    display:inline-block; padding: 3px 10px; border-radius: 999px;
+    background: var(--paper-warm); color: var(--gold);
+    font-size: 0.7rem; font-weight:700; letter-spacing: 0.04em; text-transform: uppercase;
+    border: 1px solid var(--gold-light);
+  }
+  .service-card-soon{ opacity: 0.85; }
+  .service-card-soon .service-icon svg{ stroke: var(--ink-soft); }
 
   /* ---------- How it works ---------- */
   .steps{
@@ -250,8 +261,11 @@
     max-width: var(--max); margin:0 auto;
     display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:14px;
   }
-  .footer-brand{ display:flex; align-items:center; gap:10px; color: var(--paper); font-family:'Fraunces', serif; font-weight:600; }
-  .footer-brand svg{ width:24px; height:24px; }
+  .footer-brand{ display:flex; align-items:center; }
+  .footer-brand .footer-logo{
+    height:34px; width:auto; display:block;
+    background: var(--paper); border-radius: 6px; padding: 4px 10px;
+  }
 
   /* section id offset for sticky header */
   section[id]{ scroll-margin-top: 84px; }
